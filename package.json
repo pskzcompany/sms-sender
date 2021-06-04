@@ -66,5 +66,8 @@
     "eslint": "eslint --ext .ts ./src",
     "test": "npm run coverage && npm run eslint && npm run tscheck",
     "semantic-release": "semantic-release"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
