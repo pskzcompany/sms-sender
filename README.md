@@ -1,11 +1,10 @@
-# sms-sender :envelope: :rocket:
+# sms-sender
 
-[![travis build](https://img.shields.io/travis/FrankAst/sms-sender.svg)](https://travis-ci.org/FrankAst/sms-sender)
-[![codecov coverage](https://img.shields.io/codecov/c/github/FrankAst/sms-sender.svg)](https://codecov.io/github/FrankAst/sms-sender)
-[![](https://img.shields.io/npm/v/@frankast/sms-sender.svg)](https://www.npmjs.com/package/@frankast/sms-sender)
-[![npm](https://img.shields.io/npm/dt/@frankast/sms-sender.svg)](http://www.npmtrends.com/@frankast/sms-sender)
+[![travis build](https://img.shields.io/travis/pskzcompany/sms-sender.svg)](https://travis-ci.org/pskzcompany/sms-sender)
+[![codecov coverage](https://img.shields.io/codecov/c/github/pskzcompany/sms-sender.svg)](https://codecov.io/github/pskzcompany/sms-sender)
+[![](https://img.shields.io/npm/v/@pskzcompany/sms-sender.svg)](https://www.npmjs.com/package/@pskzcompany/sms-sender)
+[![npm](https://img.shields.io/npm/dt/@pskzcompany/sms-sender.svg)](http://www.npmtrends.com/@pskzcompany/sms-sender)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/FrankAst/sms-sender.svg)](https://greenkeeper.io/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 This is a wrapper for [AWS.SNS](https://aws.amazon.com/sns/) and [SMSC API](https://smsc.ru).
@@ -13,7 +12,7 @@ This is a wrapper for [AWS.SNS](https://aws.amazon.com/sns/) and [SMSC API](http
 ## Installation
 
 ```bash
-yarn add @frankast/sms-sender
+yarn add @pskzcompany/sms-sender
 ```
 
 ## API
@@ -25,7 +24,7 @@ There are three providers `Smsc.js` (default), `Sns.js`, `Mobizon`. If you want 
 To send an SMS you have to create an instance of provider and call `sendSms()` method:
 
 ```js
-import { Smsc } from '@frankast/sms-sender';
+import { Smsc } from '@pskzcompany/sms-sender';
 
 const smsc = new Smsc({
   login: YOUR_SMSC_LOGIN,
@@ -68,7 +67,7 @@ const response = await smsc.getStatus('40-77718637484'); // takes messageId (id-
 // }
 ```
 
-P.S. You can get status codes [here](https://github.com/FrankAst/sms-sender/blob/3946a34f0d68369914e1ac6c180cc2a5948b718d/src/transporters/Smsc.js#L49) or in [SMSC docs](https://smsc.kz/api/http/status_messages/statuses/#menu).
+P.S. You can get status codes [here](https://github.com/pskzcompany/sms-sender/blob/3946a34f0d68369914e1ac6c180cc2a5948b718d/src/transporters/Smsc.js#L49) or in [SMSC docs](https://smsc.kz/api/http/status_messages/statuses/#menu).
 
 #### Get cost of SMS
 
@@ -101,7 +100,7 @@ Here is an example of usage with RegExp:
 ```js
 // @flow
 
-import { Smsc, Sns, Mobizon } from '@frankast/sms-sender';
+import { Smsc, Sns, Mobizon } from '@pskzcompany/sms-sender';
 
 // don't forget to put your credentials
 const providers = {
@@ -138,7 +137,7 @@ send('+77081113344', 'hello world').then(res => {
 });
 ```
 
-Other examples are available in [./examples](https://github.com/FrankAst/sms-sender/tree/master/examples).
+Other examples are available in [./examples](https://github.com/pskzcompany/sms-sender/tree/master/examples).
 
 ## Contribution
 
@@ -146,4 +145,4 @@ Feel free to submit pull request to us. Also, be sure all tests has passed other
 
 ## License
 
-[MIT](https://github.com/FrankAst/sms-sender/blob/master/LICENSE.md)
+[MIT](https://github.com/pskzcompany/sms-sender/blob/master/LICENSE.md)
