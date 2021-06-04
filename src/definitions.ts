@@ -1,22 +1,22 @@
 export type SendSmsResponseT = {
   messageId: string;
-  rawResponse: unknown; // vanilla response from transporter
+  rawResponse: any; // vanilla response from transporter
 };
 
 export type GetCostResponseT = {
   cost: string;
-  rawResponse: unknown; // vanilla response from transporter
+  rawResponse: any; // vanilla response from transporter
 };
 
 export type SmsStatusT = 'ok' | 'pending' | 'error';
 export type GetStatusResponseT = {
   status: SmsStatusT;
-  rawResponse: unknown; // vanilla response from transporter
+  rawResponse: any; // vanilla response from transporter
 };
 
 export type GetBalanceResponseT = {
   balance: string;
-  rawResponse: unknown; // vanilla response from transporter
+  rawResponse: any; // vanilla response from transporter
 };
 
 export interface ProviderI {
